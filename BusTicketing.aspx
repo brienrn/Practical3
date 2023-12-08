@@ -7,13 +7,13 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            width: 91px;
+            width: 107px;
         }
         .auto-style2 {
             width: 8px;
         }
         .auto-style3 {
-            width: 91px;
+            width: 107px;
             height: 26px;
         }
         .auto-style4 {
@@ -31,10 +31,10 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h2 style="text-align:center;">ABC BUS ONLINE BOOKING &amp; TICKETING SYSTEM</h2>
+            <h2>ABC BUS ONLINE BOOKING &amp; TICKETING SYSTEM</h2>
         </div>
-        <div style="text-align:center;">
-
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Label ID="lblTime" runat="server" Text="" ></asp:Label>
 
         </div>
@@ -108,9 +108,12 @@
             </div>
             <div class="auto-style6">
 
-                <asp:Button ID="btnBooktkt" runat="server" Text="Book Ticket" Width="103px" />
-&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" />
+                <asp:Button ID="btnBookTkt" runat="server" Text="Book Ticket" Width="103px" 
+                    OnClientCLick="javascript:alert('You will now be directed to the booking confirmation page')" PostBackUrl="~/ConfirmBooking.aspx"/>
+                    &nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel"
+                    OnMouseOver="this.value='Click if you confirm to reset selection'"
+                    OnMouseOut="this.value='Cancel'"/>
 
             </div>
         </div>
