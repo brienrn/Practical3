@@ -90,11 +90,6 @@ namespace Practical3
             //Display Output
             txtPrice.Text = price.ToString("C2"); //MYR Sign
 
-           
-
-
-
-
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

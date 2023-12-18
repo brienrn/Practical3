@@ -13,15 +13,15 @@ namespace Practical3
         {
             if (PreviousPage != null && PreviousPage.IsCrossPagePostBack)
             {
+                //Get details from previous page
                 TextBox AdultNo = PreviousPage.FindControl("txtAdult") as TextBox;
                 TextBox ChildNo = PreviousPage.FindControl("txtChild") as TextBox;
                 TextBox TicketPrice = PreviousPage.FindControl("txtPrice") as TextBox;
-                TextBox DepartDate = PreviousPage.FindControl("txtDepartDt") as
-                TextBox;
-                DropDownList TravelFrom = PreviousPage.FindControl("ddlFrom") as
-                DropDownList;
-                DropDownList TravelTo = PreviousPage.FindControl("ddlTo") as
-                DropDownList;
+                TextBox DepartDate = PreviousPage.FindControl("txtDepartDt") as TextBox;
+                DropDownList TravelFrom = PreviousPage.FindControl("ddlFrom") as DropDownList;
+                DropDownList TravelTo = PreviousPage.FindControl("ddlTo") as DropDownList;
+
+                //Display to lblDetails
                 lblDetails.Text = "Departure Date : " + DepartDate.Text + "</br>" +
                 "From : " + TravelFrom.SelectedItem.Value + "</br> " +
                 "To : " + TravelTo.SelectedItem.Value + "</br> " +
